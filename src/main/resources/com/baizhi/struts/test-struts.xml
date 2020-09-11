@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" "struts-2.1.7.dtd" >
+<struts>
+    <include file="com/baizhi/struts/inter-struts.xml"></include>
+    <package name="test1" extends="test" namespace="/test">
+        <action class="com.baizhi.action.TestAction" name="test1" method="test1">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result name="login">/index1.jsp</result>
+            <result name="active">/index2.jsp</result>
+            <result name="success">/index3.jsp</result>
+         </action>
+    </package>
+</struts>
